@@ -14,6 +14,7 @@ export default navbar([
         prefix: "Java基础/",
         children: [
           { text: "Java基础1", icon: "pen-to-square", link: "tomato" },
+          { text: "Java基础2", icon: "pen-to-square", link: "JavaBase2" },
 
         ],
       },

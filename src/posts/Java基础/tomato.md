@@ -1,9 +1,9 @@
 ---
 cover: /assets/images/cover2.jpg
 icon: pen-to-square
-date: 2022-01-12
+date: 2024-05-05
 category:
-  - 蔬菜
+  - Java基础
 tag:
   - 红
   - 圆
@@ -38,11 +38,25 @@ sticky: true
 4. 从默认值来看：如果没有显示的赋值，成员变量有默认值（如果是包装类型，那么默认值是null，如果不是包装类似，就以对应的类型为准）局部变量没有自动默认值，必须显示赋值
     > 如果成员变量如果被final修饰，那么也必须显示赋值
 
+`延伸：`
 ##### 为什么成员变量要有自动默认值？（why）
 1. 成员变量默认自动的赋初始值的话，可以避免空引用的错误
 2. 并且，对象的状态会更有可预测性
 
-##### 如何显式的赋值？（how）
+####  显示赋值的方法（how？以Boolean为例）
+1. **使用`Boolean`的静态工厂方法`valueOf`**：`Boolean`类提供了一个静态工厂方法`valueOf`，它接受一个`boolean`值或者一个`String`值（`"true"`或`"false"`）作为参数，并返回对应的`Boolean`对象。示例如下：
+
+    ```java
+    Boolean bool1 = Boolean.valueOf(true); // 传入布尔值 true
+    Boolean bool2 = Boolean.valueOf("true"); // 传入字符串 "true"
+    ```
+
+2. **使用自动装箱**：Java提供了自动装箱（autoboxing）的功能，可以自动将基本数据类型转换为对应的包装类型。因此，你可以直接将`boolean`值赋给`Boolean`对象，系统会自动进行装箱操作。示例如下：
+
+    ```java
+    Boolean bool3 = true; // 自动装箱，将布尔值 true 赋给 Boolean 对象
+    ```
+> Boolean 在java9之后没有无参构造方法
 
 ##### final是什么（what）
 ##### 访问修饰符是什么？(what)
@@ -56,6 +70,5 @@ sticky: true
 >5. 第5个，java提供的自动装箱和自动拆箱，使得基本类型在包装类型之间的转换更方便
 
 
-### 标题 3
 
-这里是内容。
+
