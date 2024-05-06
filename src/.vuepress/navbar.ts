@@ -9,6 +9,15 @@ export default navbar([
     prefix: "/posts/",
     children: [
       {
+        text: "java基础",
+        icon: "pen-to-square",
+        prefix: "Java基础/",
+        children: [
+          { text: "Java基础1", icon: "pen-to-square", link: "tomato" },
+
+        ],
+      },
+      {
         text: "苹果",
         icon: "pen-to-square",
         prefix: "apple/",
