@@ -19,6 +19,16 @@ export default navbar([
         ],
       },
       {
+        text: "设计模式",
+        icon: "pen-to-square",
+        prefix: "设计模式/",
+        children: [
+          { text: "设计模式先导", icon: "pen-to-square", link: "DesignPatternInto" },
+
+
+        ],
+      },
+      {
         text: "苹果",
         icon: "pen-to-square",
         prefix: "apple/",
