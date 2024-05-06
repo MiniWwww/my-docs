@@ -13,7 +13,7 @@ sticky: true
 
 # Java基础
 
-## Java的8种基本类型和对韵歌的包装类型，以及他们的默认值（what）
+## Java的8种基本类型和对应的的包装类型，以及他们的默认值（what）
 1. byte ：Byte 0：初始化强制赋值(以下同理)
 2. short：Short 0:
 3. int：Integer 0：
