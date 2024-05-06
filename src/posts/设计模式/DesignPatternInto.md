@@ -10,6 +10,7 @@ tag:
 star: true
 sticky: true
 ---
+# 设计模式导入
 
 ## 设计模式分类（what）
 
