@@ -11,7 +11,7 @@ star: true
 sticky: true
 ---
 
-# Java基础
+# 2.Java基础
 
 ## 变量
 ### Java的8种基本类型和对应的的包装类型，以及他们的默认值（what）
