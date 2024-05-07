@@ -3,11 +3,13 @@ cover: /assets/images/cover2.jpg
 icon: pen-to-square
 date: 2024-05-05
 category:
-  - Java基础
+  - 数据库
 tag:
   - 红
   - 圆
 star: true
 sticky: true
 ---
-# 4.Object
+
+# 2.常用sql语句
+

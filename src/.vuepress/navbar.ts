@@ -19,6 +19,16 @@ export default navbar([
         ],
       },
       {
+        text: "数据库",
+        icon: "pen-to-square",
+        prefix: "数据库/",
+        children: [
+          { text: "实战-sql语句", icon: "pen-to-square", link: "mysqlUse" },
+
+
+        ],
+      },
+      {
         text: "设计模式",
         icon: "pen-to-square",
         prefix: "设计模式/",

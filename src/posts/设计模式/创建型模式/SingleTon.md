@@ -52,6 +52,7 @@ public class  singleTon{
 
 //    私有的静态内部类
     private  class singleTonHandler{
+    //注意这里写new
         private static singleTon instance=new singleTon();
 }
 
@@ -61,6 +62,7 @@ public class  singleTon{
         return  singleTonHandler.instance;
     }
 //    防止反序列化破解单例模式
+//注意这里的返回值是Object，在海康的笔试中就写错了
     private  Object readResolve(){
         return  singleTonHandler.instance;
     }
