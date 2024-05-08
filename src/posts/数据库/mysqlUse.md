@@ -43,6 +43,7 @@ sticky: true
 5. **ORDER BY**：对结果进行排序。
 - 示例：`SELECT column1 FROM table_name ORDER BY column1 ASC;`
 - 解释：从"table_name"表中选择"column1"列的数据，并按升序对结果进行排序。
+- 降序：**DESC**
 
 6. **GROUP BY**：根据一个或多个列对结果进行分组。
 - 示例：`SELECT COUNT(*), column1 FROM table_name GROUP BY column1;`
@@ -51,7 +52,31 @@ sticky: true
 7. **HAVING**：对GROUP BY子句的结果进行过滤。
 - 示例：`SELECT COUNT(*), column1 FROM table_name GROUP BY column1 HAVING COUNT(*) > 1;`
 - 解释：对"table_name"表中的数据按照"column1"列进行分组，并只返回分组中行数大于1的分组结果。
+  - 举例：
+  > 好的，让我为你创建一个简单的表格来演示。假设我们有一个名为`students`的表格，其中包含学生姓名和他们所在的班级。我们可以使用`HAVING`子句来过滤出每个班级中学生人数大于1的情况。
 
+| 学生姓名 | 班级   |
+|----------|--------|
+| 小明     | 1班    |
+| 小红     | 1班    |
+| 小华     | 2班    |
+| 小强     | 2班    |
+| 小亮     | 3班    |
+
+现在，我们执行以下 SQL 查询：
+
+```sql
+SELECT COUNT(*), class FROM students GROUP BY class HAVING COUNT(*) > 1;
+```
+
+  这将返回如下结果：
+  
+  | COUNT(*) | 班级   |
+  |----------|--------|
+  | 2        | 1班    |
+  | 2        | 2班    |
+
+这说明在1班和2班中都有至少两个学生。
 8. **LIMIT**：限制返回的行数。
 - 示例：`SELECT column1 FROM table_name LIMIT 10;`
 - 解释：从"table_name"表中选择"column1"列的数据，最多返回10行。

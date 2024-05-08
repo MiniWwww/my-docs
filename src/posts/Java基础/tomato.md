@@ -67,6 +67,11 @@ sticky: true
 > Boolean 在java9之后没有无参构造方法
 
 ##### final是什么（what）
+- 一个关键字
+- 被final修饰的不能被修改，不能被重写
+  - final修饰变量：变量不能被修改
+  - final修饰方法：方法不能被修改
+  - final修饰类；类不能被继承
 ##### 访问修饰符是什么？(what)
 > 访问修饰符有pubilc protected privete default（包级别） 
 
@@ -79,6 +84,7 @@ sticky: true
 
 #### 静态变量是什么（what）
 > 静态变量是被static修饰的变量，它属于类的，是类的属性，该类的所有对象共享，可以通过类名来访问
+> static修饰的变量可以被修改
 
 ## 方法
 ### 方法的类型有哪些（what）
