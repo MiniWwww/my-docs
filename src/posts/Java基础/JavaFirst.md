@@ -101,6 +101,86 @@ sticky: true
 > 
 
 
+### 为什么java只有值传递？
+- java设计者看到了c++的引用传递的弊端，所以他的设计初衷是为了简化这个吧？
+#### 什么是java值传递？（what）
+> - 总结：如果传递的是基本数据类型，那就是传统意义上的值传递，如果是对象类型，起始传递的是对象的引用的拷贝，通过这个拷贝来修改原始对象是允许的
+>   - Java 中没有传统意义上的引用传递，是因为 Java 的参数传递都是按值传递。即使是对象引用也是按值传递的，传递的是对象引用的拷贝（对象引用是对象的地址，对象引用的拷贝就是地址的拷贝，所以还是拿到了地址，还是会影响到原来的对象。），而不是对象本身
+考虑下面的代码：
+>   - c++中的引用传递，传递的是变量的原来的引用？不是再把引用拷贝过一次之后再传递的
+
+通过一个简单的例子来说明 Java 中的值传递。
+```java
+public class Main {
+    public static void main(String[] args) {
+        int num = 10;
+        System.out.println("Before method call: " + num);
+        modifyValue(num);
+        System.out.println("After method call: " + num);
+    }
+
+    public static void modifyValue(int num) {
+        num = 20;
+        System.out.println("Inside method: " + num);
+    }
+}
+```
+
+在这个例子中，我们有一个 `main` 方法，在其中创建了一个名为 `num` 的整数变量并初始化为 10。然后，我们调用了 `modifyValue` 方法，并将 `num` 作为参数传递给它。在 `modifyValue` 方法中，我们将参数 `num` 的值更改为 20，并打印出新的值。
+
+但是，如果你运行这个程序，你会发现输出如下：
+
+```
+Before method call: 10
+Inside method: 20
+After method call: 10
+```
+
+这里的关键是，在调用 `modifyValue` 方法时，我们传递了 `num` 的值的拷贝。在方法内部，对参数 `num` 的修改只是修改了这个拷贝，而不会影响到 `main` 方法中原始的 `num` 变量。所以，尽管在方法内部将 `num` 更改为 20，但在 `main` 方法中输出 `num` 的值仍然是 10。
+
+现在，让我们看一个涉及对象的例子：
+
+```java
+class Person {
+    String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person("Alice");
+        System.out.println("Before method call: " + person.name);
+        modifyReference(person);
+        System.out.println("After method call: " + person.name);
+    }
+
+    public static void modifyReference(Person p) {
+        p.name = "Bob";
+        System.out.println("Inside method: " + p.name);
+    }
+}
+```
+输出：
+```
+Before method call: Alice
+Inside method: Bob
+After method call: Bob
+```
+
+> 这个例子和之前的例子类似，不同之处在于现在我们有一个 `Person` 类型的对象作为参数传递给 `modifyReference` 方法。在方法内部，我们修改了这个对象的属性 `name`。但是，由于我们传递的是对象的引用的拷贝，修改了对象的属性后，这个修改将影响到原始的对象。（修改引用本身不会影响原始引用，但是对引用指向的对象的修改会影响原始对象。）所以，即使在方法调用之后，我们在 `main` 方法中输出对象的属性时，它仍然是 "Bob"，而不是 "Alice"。
+
+这就是 Java 中值传递的工作原理。
+
+#### 为什么java传递对象类型的方法参数时，是进行对象的引用的拷贝，也会影响到对象，为什么不直接传递原始对象的原来的引用呢(why）？
+
+> Java 中传递对象类型的方法参数时，实际上是将对象的引用（reference）进行了拷贝，而不是对象本身。这意味着，虽然传递的是引用的拷贝，但这两个引用仍指向同一个对象实例，因此对这个对象的修改会影响到原始对象。
+
+为什么不直接传递原始对象的原来的引用呢？这涉及到Java中参数传递的机制。Java中所有的传递都是按值传递，包括对象引用(是个地址值，不是对象）。也就是说，当你将一个对象作为参数传递给方法时，你传递的是对象引用的值（即对象在内存中的地址），而不是对象本身。
+
+
 
 
 
