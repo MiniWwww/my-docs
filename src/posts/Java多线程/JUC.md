@@ -3,7 +3,7 @@ cover: /assets/images/cover2.jpg
 icon: pen-to-square
 date: 2024-05-05
 category:
-  - 后端
+  - Java多线程
 tag:
   - 红
   - 圆
@@ -32,6 +32,7 @@ java中处理线程的一个工具包
 > 本质上创建线程的方法只有一个
 > - new Thread()
 > - 实现Runnable接口和callable接口并且重写run方法知识获取到了任务对象，将任务对象传递给线程的同时也调用了new thread来创建对象
+> - 线程池创建线程
 - 举例：
   - ``` java
     //1.继承thread类
@@ -115,6 +116,55 @@ java中处理线程的一个工具包
     - wait()和join的区别
     - ![img.png](img.png)
 
+在Java中，"wait"、"join"和"sleep"是用于线程控制的三个重要方法，它们有不同的作用和用法：
+
+1. **wait()**：
+    - wait() 是 Object 类中的一个方法，用于在多线程环境下实现线程间的协调和通信。
+    - 调用 wait() 方法会使当前线程进入等待状态，直到另一个线程调用相同对象的 notify() 或 notifyAll() 方法来唤醒它。
+    - wait() 方法通常与 synchronized 关键字一起使用，因为它要求在调用 wait() 方法前必须获得对象的监视器（即锁）。
+
+```java
+synchronized (obj) {
+    while (conditionIsNotMet) {
+        obj.wait(); // 等待，直到条件满足
+    }
+}
+```
+
+2. **join()**：
+    - join() 是 Thread 类中的一个方法，用于等待另一个线程的终止。
+    - 调用 join() 方法会使当前线程等待直到被调用 join() 方法的线程执行完成或超时。
+    - join() 方法通常用于在主线程中等待其他线程执行完成后再继续执行。
+
+```java
+Thread t = new Thread(() -> {
+    // 执行一些任务
+});
+t.start();
+try {
+    t.join(); // 等待线程 t 执行完成
+} catch (InterruptedException e) {
+    // 处理中断异常
+}
+```
+
+3. **sleep()**：
+    - sleep() 是 Thread 类中的一个静态方法，用于让当前线程休眠一段时间。
+    - 调用 sleep() 方法会使当前线程暂停执行指定的时间，但不会释放锁，因此其他线程无法访问共享资源。
+    - sleep() 方法通常用于在不需要锁的情况下暂停当前线程的执行，例如，用于模拟延迟或者简单的定时任务。
+
+```java
+try {
+    Thread.sleep(1000); // 休眠一秒钟
+} catch (InterruptedException e) {
+    // 处理中断异常
+}
+```
+
+总结：
+- wait()、join() 和 sleep() 在功能上有所不同，分别用于线程间的等待、等待另一个线程的结束和线程的暂停。
+- wait() 和 join() 都是通过 Object 类或 Thread 类的实例方法调用的，而 sleep() 是 Thread 类的静态方法。
+- wait() 方法需要在同步块或同步方法中调用，而 join() 和 sleep() 方法则可以在任何地方调用。
 
 ## 线程状态切换图（what）
 ![img_1.png](img_1.png)
@@ -122,6 +172,3 @@ java中处理线程的一个工具包
 - ![img_2.png](img_2.png)
 
 
-## 锁
-
-### 理清楚锁的对象到底是谁（？）
