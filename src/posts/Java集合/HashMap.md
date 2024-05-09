@@ -11,6 +11,8 @@ star: true
 sticky: true
 ---
 
+
+
 # HashMap
 在 Java 中，当 HashMap 发生哈希冲突且数组长度小于64时，会先进行数组扩容。这是因为 HashMap 内部采用了一个称为负载因子（load factor）的概念来控制数组的扩容。负载因子是指哈希表中存储的元素数量与数组长度的比值，当这个比值超过了预设的阈值（通常为 0.75），HashMap 就会触发扩容操作，以保持哈希表的性能。
 
@@ -35,3 +37,4 @@ sticky: true
 3. **迭代器失效**：在进行扩容和重新哈希的过程中，如果有其他线程正在使用迭代器遍历 HashMap，可能会导致迭代器失效或者抛出 ConcurrentModificationException 异常。
 
 为了解决这些并发问题，Java 中的 HashMap 提供了一些线程安全的措施，比如使用 synchronized 关键字或者使用分段锁（在 ConcurrentHashMap 中）。另外，Java 8 引入了基于 CAS（Compare and Swap）操作的并发桶分割技术，进一步提高了并发性能。
+
