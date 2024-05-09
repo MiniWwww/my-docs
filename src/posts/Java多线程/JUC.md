@@ -169,6 +169,7 @@ try {
 ## 线程状态切换图（what）
 ![img_1.png](img_1.png)
 - 注意细节：
-- ![img_2.png](img_2.png)
+
+![img_2.png](img_2.png)
 
 
