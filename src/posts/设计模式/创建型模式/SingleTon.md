@@ -57,12 +57,13 @@ public class  singleTon{
 }
 
 //全局访问点
-    private singleTon getInstance(){
+    public singleTon getInstance(){
     //不是直接写instance
         return  singleTonHandler.instance;
     }
 //    防止反序列化破解单例模式
 //注意这里的返回值是Object，在海康的笔试中就写错了
+//注意这里是private
     private  Object readResolve(){
         return  singleTonHandler.instance;
     }

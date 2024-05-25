@@ -13,7 +13,8 @@ sticky: true
 
 # 3.JMM(java内存模型)
 - 注意跟java内存结构区分
-    - Java内存模型是什么（what）
+    - Java内存结构是什么（what）
+    - 
 ## JMM是什么（what）
 - JMM 定义了JVM将变量到内存中和从内存中读取变量的细节
 - 也定义多线程访问共享变量的规则
