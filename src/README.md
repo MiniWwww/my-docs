@@ -10,27 +10,27 @@ tagline: 代码之外，思维之内
 #tagline: 循环如曲，代码为词
 projects:
   - icon: project
-    name: 项目名称
+    name: 项目
     desc: 等待添加
 #    link: https://你的项目链接
 
-  - icon: link
-    name: 链接名称
-    desc: 等待添加
+#  - icon: link
+#    name: 链接名称
+#    desc: 等待添加
 #    link: https://链接地址
 
   - icon: book
-    name: 书籍名称
-    desc: 等待添加
-#    link: https://你的书籍链接
+    name: 文章目录
+    desc: 点击跳转文章目录
+    link: https://miniwwww.github.io/my-docs/posts/数据库/mysql索引.html
 
-  - icon: article
-    name: 文章名称
-    desc: 等待添加
+#  - icon: article
+#    name: 文章名称
+#    desc: 等待添加
 #    link: https://你的文章链接
 
   - icon: friend
-    name: 伙伴名称
+    name: 伙伴
     desc: 等待添加
 #    link: https://你的伙伴链接
 
