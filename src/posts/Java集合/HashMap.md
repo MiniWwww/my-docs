@@ -15,8 +15,14 @@ sticky: true
 # HashMap
 ![img.png](img.png)
 ## HashMap的put方法的具体流程
+::: tip HashMap的put方法的具体流程
+
+1232
+
+:::
 
 > 1. 判断键值对**数组table是否为空或为null**，否则执行**resize()进行扩容（初始化）**
+
 >
 > 2. 根据键值key的hash值计算得到数组索引i
 >
