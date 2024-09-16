@@ -51,13 +51,7 @@ sticky: true
 > 添加索引后查询：
 >
 > ```mysql
-> -- 添加索引
-> 
-> create index idx_sku_sn on  (sn);  #在添加索引时，也需要消耗时间
-> 
-> -- 查询数据（使用了索引）
-> select * from tb_sku where sn = '100000003145008';
-> ~~~
+
 >
 ![img_5.png](img_5.png)
 
