@@ -23,7 +23,7 @@ export default navbar([
       {
         text: "数据库",
         icon: "pen-to-square",
-        prefix: "设计模式",
+        prefix: "数据库",
         children: [
           { text: "Mysql索引", icon: "pen-to-square", link: "mysql索引" },
 
