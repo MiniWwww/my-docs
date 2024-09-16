@@ -10,7 +10,7 @@ tag:
 star: true
 sticky: true
 ---
-# 3.数据库索引
+# mysql索引
 
 
 ## 聚簇索引和非聚簇索引（what)

@@ -13,11 +13,3 @@ sticky: true
 
 # mysql锁
 
-## 行级锁
-- 记录锁
-- 间隙锁
-- 临键锁
-
-## mysql怎么加行级锁的
-
-![img_3.png](img_3.png)
