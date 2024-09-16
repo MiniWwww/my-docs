@@ -11,7 +11,7 @@ star: true
 sticky: true
 ---
 
-# 2.数据库事务
+# 待定名称
     
 ## mysql的基础架构（一条sql语句在mysql中的执行流程）
 假设我们有一个简单的表结构如下：
