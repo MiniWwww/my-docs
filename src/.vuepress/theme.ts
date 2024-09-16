@@ -73,8 +73,10 @@ export default hopeTheme({
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
+      "/posts/Java多线程/base1.html": ["5678"], // 另一个页面的密码
     },
   },
+
 
   // 多语言配置
   metaLocales: {
