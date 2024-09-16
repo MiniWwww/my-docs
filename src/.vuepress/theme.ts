@@ -31,7 +31,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "厦门大学软件工程本科在读",
+    description: "厦门大学软件工程本科",
     intro: "/intro.html",
     medias: {
       // Baidu: "https://example.com",
@@ -44,8 +44,8 @@ export default hopeTheme({
       // Evernote: "https://example.com",
       // Facebook: "https://example.com",
       // Flipboard: "https://example.com",
-      Gitee: "https://example.com",
-      // GitHub: "https://example.com",
+      // Gitee: "https://example.com",
+      GitHub: "https://github.com/MiniWwww",
       // Gitlab: "https://example.com",
       // Gmail: "mailto:info@example.com",
       // Instagram: "https://example.com",
