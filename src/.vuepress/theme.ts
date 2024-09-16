@@ -7,8 +7,8 @@ export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "MiniW",
+    // url: "https://mister-hope.com",
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -31,7 +31,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "一个后端开发者",
+    description: "厦门大学软件工程本科在读",
     intro: "/intro.html",
     medias: {
       // Baidu: "https://example.com",
