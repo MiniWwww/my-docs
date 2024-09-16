@@ -19,6 +19,16 @@ export default navbar([
       //
       //   ],
       // },
+
+      {
+        text: "数据库",
+        icon: "pen-to-square",
+        prefix: "设计模式",
+        children: [
+          { text: "Mysql索引", icon: "pen-to-square", link: "mysql索引" },
+
+        ],
+      },
       {
         text: "设计模式",
         icon: "pen-to-square",
@@ -28,6 +38,7 @@ export default navbar([
 
         ],
       },
+
 
       //直接引用文章的：
       // "tomato",
