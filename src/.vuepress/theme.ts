@@ -44,7 +44,7 @@ export default hopeTheme({
       // Evernote: "https://example.com",
       // Facebook: "https://example.com",
       // Flipboard: "https://example.com",
-      // Gitee: "https://example.com",
+      Gitee: "https://example.com",
       // GitHub: "https://example.com",
       // Gitlab: "https://example.com",
       // Gmail: "mailto:info@example.com",
@@ -65,7 +65,7 @@ export default hopeTheme({
       // Whatsapp: "https://example.com",
       // Youtube: "https://example.com",
       // Zhihu: "https://example.com",
-      MrHope: ["https://mister-hope.com", MR_HOPE_AVATAR],
+      // MrHope: ["https://mister-hope.com", MR_HOPE_AVATAR],
     },
   },
 
