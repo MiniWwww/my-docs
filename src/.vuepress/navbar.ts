@@ -22,10 +22,9 @@ export default navbar([
       {
         text: "设计模式",
         icon: "pen-to-square",
-        prefix: "设计模式/",
+        prefix: "设计模式/创建型模式",
         children: [
           { text: "单例模式", icon: "pen-to-square", link: "SingleTon" },
-
 
         ],
       },
