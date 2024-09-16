@@ -31,7 +31,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "厦门大学软件工程-本科-Java开发",
+    description: "厦门大学软件工程-本科-后端",
     intro: "/intro.html",
     medias: {
       // Baidu: "https://example.com",
