@@ -11,7 +11,7 @@ star: true
 sticky: true
 ---
 
-# 1.待定名称
+# 待定名称
 
 ## 总图
 
