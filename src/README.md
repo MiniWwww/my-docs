@@ -4,9 +4,10 @@ layout: BlogHome
 icon: home
 title: 博客主页
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
-heroText: 你博客的名称
+heroText: MiniW
 heroFullScreen: true
-tagline: 你可以在这里放置你的口号与标语
+tagline: 代码之外，思维之内
+#tagline: 循环如曲，代码为词
 projects:
   - icon: project
     name: 项目名称

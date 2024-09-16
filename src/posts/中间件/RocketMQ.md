@@ -12,4 +12,3 @@ sticky: true
 ---
 
 # RocketMQ
-![img.png](img.png)
